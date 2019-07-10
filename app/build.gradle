@@ -22,10 +22,15 @@ android {
            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
        }
     }
+
     externalNativeBuild {
         ndkBuild {
             path file('src/main/cpp/Android.mk')
         }
+    }
+
+    aaptOptions {
+        noCompress "dict"
     }
 
 }
